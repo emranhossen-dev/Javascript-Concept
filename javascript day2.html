@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Day 2</title>
+  </head>
+  <body>
+    <label for="">The Value of a:</label>
+    <input id="valueA" type="number" />
+    <br />
+    <br />
+    <label for="">The value of b:</label>
+    <input id="valueB" type="number" /> <br />
+    <button onclick="submit()">Submit</button> <br>
+    <div id="body">
+      <p id="show"></p>
+      <p id="swap"></p>
+      <p id="add"></p>
+      <p id="subtract"></p>
+      <p id="multiply"></p>
+      <p id="division"></p>
+      <p id="hide"></p>
+    </div>
+    <button onclick="swap()">Swap</button>
+    <button onclick="Add()">Add</button>
+    <button onclick="Subtract()">Subtract</button>
+    <button onclick="Multiply()">Multiply</button>
+    <button onclick="Division()">Division</button>
+    <button onclick="hide()">Hide</button>
+
+    <script>
+      function submit() {
+        a = Number(document.getElementById("valueA").value);
+        b = Number(document.getElementById("valueB").value);
+        document.getElementById("show").innerHTML = "a=" + a + ", " + " b=" + b;
+      }
+      function swap() {
+        c = a;
+        a = b;
+        b = c;
+        document.getElementById("swap").innerHTML = "a=" + a + ", b=" + b;
+      }
+      function Add() {
+        let c = a + b;
+        document.getElementById("add").innerHTML =
+          "The summation of a and b is=" + c;
+      }
+
+      function Subtract() {
+        let c = a - b;
+        document.getElementById("subtract").innerHTML =
+          "The subtraction of a and b is=" + c;
+      }
+      function Multiply() {
+        let c = a * b;
+        document.getElementById("multiply").innerHTML =
+          "The multiplication of a and b is=" + c;
+      }
+      function Division() {
+        let c = a / b;
+        document.getElementById("division").innerHTML =
+          "The division of a and b is=" + c;
+      }
+      function hide() {
+        
+        document.getElementById("swap").innerHTML = ""
+        document.getElementById("add").innerHTML = ""
+        document.getElementById("subtract").innerHTML = ""
+        document.getElementById("multiply").innerHTML = ""
+        document.getElementById("division").innerHTML = ""
+      }
+    </script>
+  </body>
+</html>
